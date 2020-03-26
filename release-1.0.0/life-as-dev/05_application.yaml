@@ -12,4 +12,3 @@ spec:
   selector:
     matchLabels:
       app: nginx-app-details
-status: {}

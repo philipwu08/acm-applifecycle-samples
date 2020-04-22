@@ -26,6 +26,7 @@ spec:
   versions:
   - name: v1alpha3
     served: true
+    storage: true
     schema:
       openAPIV3Schema:
         type: object

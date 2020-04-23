@@ -19,5 +19,5 @@ metadata:
   labels:
     app: crd-app
 data:
-        #  path: crd-deploy/payload_v1beta1
-    path: crd-deploy/payload_v1
+    path: crd-deploy/payload_v1beta1
+    # path: crd-deploy/payload_v1

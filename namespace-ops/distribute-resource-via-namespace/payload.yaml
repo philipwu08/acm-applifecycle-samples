@@ -1,0 +1,18 @@
+--- 
+apiVersion: apps.open-cluster-management.io/v1
+kind: Deployable
+metadata: 
+  name: payload-cfg-namespace-channel
+  annotations: 
+    apps.open-cluster-management.io/is-local-deployable: "false"
+  namespace: default
+spec: 
+  channels: 
+  - ns
+  template: 
+    apiVersion: v1
+    data: 
+      database: mongodb
+    kind: ConfigMap
+    metadata: 
+      name: cfg-from-ch-qa

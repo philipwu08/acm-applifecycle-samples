@@ -21,3 +21,5 @@ spec:
     hours:
       - start: "05:00PM"
         end: "10:00PM"
+      - start: "12:40PM"
+        end: "1:40PM"

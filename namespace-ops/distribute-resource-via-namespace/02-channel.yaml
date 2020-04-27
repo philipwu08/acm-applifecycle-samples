@@ -1,0 +1,13 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: cm-delivery-ch
+  namespace: delivery
+  labels:
+    app: cm-delivery
+spec:
+  type: Namespace
+  pathname: delivery
+  sourceNamespaces:
+    - default

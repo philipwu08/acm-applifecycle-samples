@@ -8,7 +8,7 @@ metadata:
   namespace: default
 spec: 
   channels: 
-  - ns
+  - cm-delivery-ch
   template: 
     apiVersion: v1
     data: 

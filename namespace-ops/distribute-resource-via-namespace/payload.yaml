@@ -9,6 +9,7 @@ metadata:
 spec: 
   channels: 
   - cm-delivery-ch
+  - ns
   template: 
     apiVersion: v1
     data: 

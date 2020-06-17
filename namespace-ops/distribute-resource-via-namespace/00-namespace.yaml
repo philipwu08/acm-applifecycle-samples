@@ -12,3 +12,10 @@ metadata:
   name: delivery-sub
   labels:
     app: cm-delivery
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ch-ns
+  labels:
+    app: cm-delivery

@@ -1,0 +1,3 @@
+[submodule "acm-test"]
+	path = acm-test/Doc/Samples
+	url = git@github.com:open-cluster-management/acm-test.git

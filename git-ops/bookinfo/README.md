@@ -1,5 +1,4 @@
-# Configure BookInfo Application, Channels, Subscriptions, and Placement Rules in OCM
-
-## Finish this readme
-
-run `kubectl apply -k .` in this directory from your terminal.
+# Expect Results
+1. in the spoke cluster, there should be a subscription created
+2. in the spoke cluster, there should be deployment, services at subscription's
+   namespace

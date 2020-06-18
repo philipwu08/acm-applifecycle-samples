@@ -16,10 +16,9 @@ spec:
       name: bookinfo-resource-filter-configmap
   timewindow:
     windowtype: "active"
-    location: "Europe/Madrid"
-    daysofweek: [ "Friday", "Saturday", "Sunday" ]
+    location: "America/Toronto"
     hours:
-      - start: "05:00PM"
-        end: "10:00PM"
-      - start: "12:40PM"
-        end: "1:40PM"
+      - start: "09:00AM"
+        end: "12:00PM"
+      - start: "1:00PM"
+        end: "5:40PM"

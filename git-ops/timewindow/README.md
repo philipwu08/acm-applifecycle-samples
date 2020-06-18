@@ -1,5 +1,5 @@
-# Configure BookInfo Application, Channels, Subscriptions, and Placement Rules in OCM
-
-## Finish this readme
-
-run `kubectl apply -k .` in this directory from your terminal.
+# Expect Result
+1. in the spoke cluster there should be a subsription with timewindow field
+   created
+2. if the deploy is within the timewindow, then there should be a configmap
+   created

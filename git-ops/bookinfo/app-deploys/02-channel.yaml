@@ -19,4 +19,4 @@ metadata:
   labels:
     app: bookinfo
 data:
-    path: bookinfo/guestbook
+    path: git-ops/bookinfo/guestbook

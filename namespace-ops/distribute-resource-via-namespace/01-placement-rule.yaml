@@ -10,4 +10,4 @@ spec:
   clusterReplicas: 1
   clusterLabels:
     matchLabels:
-      environment: production
+      environment: dev

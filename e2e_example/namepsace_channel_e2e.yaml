@@ -80,7 +80,7 @@ spec:
   clusterReplicas: 1
   clusterLabels:
     matchLabels:
-      environment: Dev
+      environment: dev
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription

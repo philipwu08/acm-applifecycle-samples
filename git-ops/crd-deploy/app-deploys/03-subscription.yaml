@@ -5,12 +5,12 @@ metadata:
   namespace: crd-deploy
   labels:
     app: crd-app
+  annotations:
+    apps.open-cluster-management.io/github-path: git-ops/crd-deploy/payload_v1 
+    apps.open-cluster-management.io/github-branch: master
 spec:
   channel: crd-deploy/github-crd
   placement:
     placementRef:
       kind: PlacementRule
       name: dev-placementrule
-  packageFilter:
-    filterRef:
-      name: crd-github-cm

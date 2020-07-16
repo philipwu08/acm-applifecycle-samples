@@ -7,17 +7,3 @@ metadata:
 spec:
   type: GitHub
   pathname: https://github.com/ianzhang366/acm-applifecycle-samples.git
-  configMapRef:
-      name: crd-github-cm
-      kind : configmap
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: crd-github-cm
-  namespace: crd-deploy
-  labels:
-    app: crd-app
-data:
-        #path: git-ops/crd-deploy/payload_v1beta1
-    path: git-ops/crd-deploy/payload_v1

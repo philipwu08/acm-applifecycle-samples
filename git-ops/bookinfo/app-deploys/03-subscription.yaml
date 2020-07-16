@@ -5,12 +5,12 @@ metadata:
   namespace: bookinfo
   labels:
     app: bookinfo
+  annotations:
+    apps.open-cluster-management.io/github-path: git-ops/bookinfo/guestbook 
+    apps.open-cluster-management.io/github-branch: master
 spec:
   channel: bookinfo/github
   placement:
     placementRef:
       kind: PlacementRule
       name: dev-placementrule
-  packageFilter:
-    filterRef:
-      name: bookinfo-resource-filter-configmap

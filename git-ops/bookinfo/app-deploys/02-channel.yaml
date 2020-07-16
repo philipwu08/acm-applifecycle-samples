@@ -7,16 +7,3 @@ metadata:
 spec:
   type: GitHub
   pathname: https://github.com/ianzhang366/acm-applifecycle-samples.git
-  configMapRef:
-      name: bookinfo-resource-filter-configmap
-      kind : configmap
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: bookinfo-resource-filter-configmap
-  namespace: bookinfo
-  labels:
-    app: bookinfo
-data:
-    path: git-ops/bookinfo/guestbook

@@ -1,0 +1,13 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: towhichcluster
+  namespace: delivery-sub
+  labels:
+    app: cm-delivery
+spec:
+  clusterReplicas: 1
+  clusterLabels:
+    matchLabels:
+      environment: dev

@@ -1,0 +1,25 @@
+--- 
+# this deployable should NOT be promoted to channel cm-delivery-ch, since it
+# doesn't have the annotation gate flag for "dev: pass". In other words, there
+# sholdn't be a duplicate deployable at `delivery` namespace
+#
+# this deployabe should be promoted to channel ns, therefore in ch-ns namespace
+# there should be a duplicate deployable of this one
+apiVersion: apps.open-cluster-management.io/v1
+kind: Deployable
+metadata: 
+  name: payload-cfg-namespace-channel
+  annotations: 
+    apps.open-cluster-management.io/is-local-deployable: "false"
+  namespace: default
+spec: 
+  channels: 
+  - cm-delivery-ch
+  - ns
+  template: 
+    apiVersion: v1
+    data: 
+      database: mongodb
+    kind: ConfigMap
+    metadata: 
+      name: cfg-from-ch-qa-with-gate

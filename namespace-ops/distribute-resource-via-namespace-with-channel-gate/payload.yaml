@@ -1,10 +1,4 @@
 --- 
-# this deployable should NOT be promoted to channel cm-delivery-ch, since it
-# doesn't have the annotation gate flag for "dev: pass". In other words, there
-# sholdn't be a duplicate deployable at `delivery` namespace
-#
-# this deployabe should be promoted to channel ns, therefore in ch-ns namespace
-# there should be a duplicate deployable of this one
 apiVersion: apps.open-cluster-management.io/v1
 kind: Deployable
 metadata: 

@@ -32,7 +32,7 @@ metadata:
   namespace: nginx-objstore-chn-ns
 spec:
   type: ObjectBucket
-  pathname: 'http://ec2-100-26-232-156.compute-1.amazonaws.com:9000/izhang'
+  pathname: 'http://ec2-100-26-232-156.compute-1.amazonaws.com:9000/dev-test'
   secretRef:
     name: nginx-objstore-objectstore-authentication-0
 ---

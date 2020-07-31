@@ -1,13 +1,13 @@
 apiVersion: v1                      
 kind: Namespace
 metadata:
-  name: nginx-objstore-2-ns                             
+  name: nginx-objstore-ns                             
 ---
 apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
-  name: nginx-objstore-2
-  namespace: nginx-objstore-2-ns
+  name: nginx-objstore
+  namespace: nginx-objstore-ns
 spec:
   componentKinds:
   - group: apps.open-cluster-management.io
@@ -18,56 +18,56 @@ spec:
       - key: app
         operator: In
         values: 
-          - nginx-objstore-2
+          - nginx-objstore
 ---
 apiVersion: v1                      
 kind: Namespace
 metadata:
-  name: nginx-objstore-2-deva-chn-ns
+  name: nginx-objstore-chn-ns
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: nginx-objstore-2-deva-chn
-  namespace: nginx-objstore-2-deva-chn-ns
+  name: nginx-objstore-chn
+  namespace: nginx-objstore-chn-ns
 spec:
   type: ObjectBucket
-  pathname: 'http://ec2-100-26-232-156.compute-1.amazonaws.com:9000/deva'
+  pathname: 'http://ec2-100-26-232-156.compute-1.amazonaws.com:9000/izhang'
   secretRef:
-    name: nginx-objstore-2-objectstore-authentication-0
+    name: nginx-objstore-objectstore-authentication-0
 ---
 apiVersion: v1
 kind: Secret
 metadata:
-  name: nginx-objstore-2-objectstore-authentication-0
-  namespace: nginx-objstore-2-deva-chn-ns
+  name: nginx-objstore-objectstore-authentication-0
+  namespace: nginx-objstore-chn-ns
 data:
   AccessKeyID: YWRtaW4=
   SecretAccessKey: cGFzc3dvcmRhZG1pbg==
 ---
 apiVersion: apps.open-cluster-management.io/v1
-kind: Subscription
-metadata:
-  labels:
-    app: nginx-objstore-2
-  name: nginx-objstore-2-subscription-0
-  namespace: nginx-objstore-2-ns
-spec:
-  channel: nginx-objstore-2-deva-chn-ns/nginx-objstore-2-deva-chn
-  placement:
-    placementRef:
-      kind: PlacementRule
-      name: nginx-objstore-2-placement
----
-apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   labels:
-    app: nginx-objstore-2
-  name: nginx-objstore-2-placement
-  namespace: nginx-objstore-2-ns
+    app: nginx-objstore
+  name: nginx-objstore-placement
+  namespace: nginx-objstore-ns
 spec:
-  clusterReplicas: 3
-  clusterSelector:
+  clusterReplicas: 1
+  clusterLabels:
     matchLabels:
-      environment: Dev
+      environment: dev
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  labels:
+    app: nginx-objstore
+  name: nginx-objstore-subscription
+  namespace: nginx-objstore-ns
+spec:
+  channel: nginx-objstore-chn-ns/nginx-objstore-chn
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: nginx-objstore-placement

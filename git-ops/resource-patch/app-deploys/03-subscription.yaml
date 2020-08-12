@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: patch
+  namespace: resource-patch
+  labels:
+    app: patch
+  annotations:
+    apps.open-cluster-management.io/github-path: git-ops/resource-patch/resources
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: resource-patch/git
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: dev-placementrule

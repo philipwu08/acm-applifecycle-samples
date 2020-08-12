@@ -12,8 +12,8 @@ spec:
   - ns
   template: 
     apiVersion: v1
+    kind: ConfigMap
     data: 
       database: mongodb
-    kind: ConfigMap
     metadata: 
       name: cfg-from-ch-qa

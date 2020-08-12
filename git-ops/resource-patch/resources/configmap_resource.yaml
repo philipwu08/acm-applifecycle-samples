@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  annotations:
+    github-path: izhang 
   name: guestbook-cfgmap
   namespace: guestbook
   labels:

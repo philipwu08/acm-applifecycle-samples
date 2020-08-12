@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   annotations:
     github-path: ianzhang
+    github-path-2: ianzhang
   name: guestbook-cfgmap
   namespace: guestbook
   labels:

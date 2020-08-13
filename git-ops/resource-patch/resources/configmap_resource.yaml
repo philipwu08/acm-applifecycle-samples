@@ -6,6 +6,5 @@ metadata:
   name: guestbook-cfgmap
   labels:
     app: guestbook
-spec:
-  data: 
-    database: mongodb
+data: 
+  database: mongodb

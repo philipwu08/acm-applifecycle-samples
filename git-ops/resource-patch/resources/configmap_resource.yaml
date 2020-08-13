@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   annotations:
     github-path: 1
-    github-path-1: 1
-    github-path-2: "test"
   name: guestbook-cfgmap
   labels:
     app: guestbook

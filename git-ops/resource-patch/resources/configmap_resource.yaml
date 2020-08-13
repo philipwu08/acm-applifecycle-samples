@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    github-path: "aaa"
+    github-path: "aaabbb"
   name: guestbook-cfgmap
   labels:
     app: guestbook

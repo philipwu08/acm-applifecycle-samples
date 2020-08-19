@@ -14,7 +14,7 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
   annotations:
-    ian: test-a
+    ian: test-a-v2
   labels:
     tower_job_id: "173"
   name: bigjoblaunch

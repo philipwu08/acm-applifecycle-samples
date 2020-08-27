@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: ansible-hook
+  namespace: ansible 
+  labels:
+    app: ansible
+  annotations:
+    apps.open-cluster-management.io/github-path: git-ops/ansible/resources
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: ansible/git
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: dev-placementrule

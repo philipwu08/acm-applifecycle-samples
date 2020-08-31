@@ -21,3 +21,15 @@ metadata:
 spec:
   job_template_name: Demo Job Template
   tower_auth_secret: toweraccess
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  annotations:
+    ian: test-a-v2
+  labels:
+    tower_job_id: "173"
+  name: post-hook
+spec:
+  job_template_name: Demo Job Template
+  tower_auth_secret: toweraccess

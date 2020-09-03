@@ -10,7 +10,6 @@ metadata:
     apps.open-cluster-management.io/github-branch: master
 spec:
   channel: ansible/git
-  prehook: ansible/prehook-test
   placement:
     placementRef:
       kind: PlacementRule

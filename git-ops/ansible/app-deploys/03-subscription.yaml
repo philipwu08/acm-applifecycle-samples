@@ -10,6 +10,9 @@ metadata:
     apps.open-cluster-management.io/github-branch: master
 spec:
   channel: ansible/git
+  hooksecretref:
+    name: srt
+    namespace: ansible
   placement:
     placementRef:
       kind: PlacementRule

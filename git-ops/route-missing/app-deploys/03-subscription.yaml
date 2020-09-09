@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: route 
+  namespace: wordpress 
+  labels:
+    app: wordpresss
+  annotations:
+    apps.open-cluster-management.io/github-path: examples/wordpress
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: wordpress/route
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: dev-placementrule

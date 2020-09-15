@@ -9,3 +9,13 @@ metadata:
     app: guestbook
 data: 
   database: mongodb
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  labels:
+    app: guestbook
+  name: normal-ansible-job
+spec:
+  job_template_name: Demo Job Template
+  tower_auth_secret: toweraccess

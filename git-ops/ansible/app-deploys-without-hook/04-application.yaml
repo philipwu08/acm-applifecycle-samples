@@ -4,7 +4,6 @@ metadata:
   name: ansible
   namespace: ansible-post-only
 spec:
-  descriptor: {}
   selector:
     matchExpressions:
     - key: app

@@ -3,7 +3,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: git
-  namespace: ansible 
+  namespace: ansible-post-only 
 spec:
   type: git
   pathname: https://github.com/ianzhang366/acm-applifecycle-samples.git

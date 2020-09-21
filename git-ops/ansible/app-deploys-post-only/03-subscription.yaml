@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: ansible-hook
+  name: ansible-hook-post
   namespace: ansible-post-only
   labels:
     app: ansible-post-only

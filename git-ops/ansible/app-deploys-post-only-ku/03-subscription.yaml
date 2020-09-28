@@ -1,0 +1,18 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: ansible-hook-post
+  namespace: ansible-post-only
+  labels:
+    app: ansible-post-only
+  annotations:
+    apps.open-cluster-management.io/github-path: git-ops/ansible/resources-post-only-ku
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: ansible-post-only/git
+  hooksecretref:
+    name: srt
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: dev-placementrule

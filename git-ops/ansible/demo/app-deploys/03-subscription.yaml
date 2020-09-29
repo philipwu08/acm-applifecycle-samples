@@ -1,0 +1,18 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: ansible-hook
+  namespace: ansible-demo-sep
+  labels:
+    app: ansible-demo
+  annotations:
+    apps.open-cluster-management.io/github-path: git-ops/ansible/demo/resources
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: ansible-demo-sep/git
+  hooksecretref:
+    name: srt
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: dev-placementrule

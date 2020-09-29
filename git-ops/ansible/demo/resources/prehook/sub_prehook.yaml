@@ -6,7 +6,7 @@ metadata:
     ian: test-a-v2
   labels:
     tower_job_id: "173"
-  name: prehook-test
+  name: prehook-demo-test
   namespace: ansible
 spec:
   job_template_name: Demo Pre Job

@@ -4,7 +4,7 @@ kind: AnsibleJob
 metadata:
   labels:
     tower_job_id: "173"
-  name: posthook-test
+  name: posthook-demo-test
   namespace: ansible
 spec:
   job_template_name: Demo Post Job

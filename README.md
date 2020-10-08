@@ -18,3 +18,4 @@ create a folder for you case. The folder should have such layout,
 **Note, make sure the following case could pass**
 https://github.com/open-cluster-management/acm-test/tree/master/Doc/Samples
 test
+test

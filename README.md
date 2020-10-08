@@ -19,3 +19,4 @@ create a folder for you case. The folder should have such layout,
 https://github.com/open-cluster-management/acm-test/tree/master/Doc/Samples
 test
 test
+test

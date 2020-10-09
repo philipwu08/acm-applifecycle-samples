@@ -3,3 +3,4 @@
 2. in the spoke cluster, there should be deployment, services at subscription's
    namespace
 test
+a

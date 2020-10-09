@@ -4,3 +4,4 @@
    namespace
 test
 a
+a

@@ -57,7 +57,7 @@ metadata:
     name: helm-sub
 spec:
   clusterReplicas: 1
-  clusterLabels:
+  clusterSelector:
     matchLabels:
       environment: dev
 ---

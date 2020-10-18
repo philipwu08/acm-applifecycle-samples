@@ -67,7 +67,7 @@ metadata:
     name: obj-sub
 spec:
   clusterReplicas: 1
-  clusterLabels:
+  clusterSelector:
     matchLabels:
       environment: dev
 ---

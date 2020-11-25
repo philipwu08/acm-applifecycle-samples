@@ -48,8 +48,8 @@ metadata:
   labels:
     apps.open-cluster-management.io/channel: helm-ch
     apps.open-cluster-management.io/channel-type: HelmRepo
-  name: example-configmap
-  namespace: helm-local 
+  name: sample-guestbook
+  namespace: helm-local
 spec:
   template:
     apiVersion: apps.open-cluster-management.io/v1

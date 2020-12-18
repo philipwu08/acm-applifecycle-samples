@@ -5,7 +5,7 @@ metadata:
   labels:
     tower_job_id: "173"
   name: posthook-test
-  namespace: ansible
+  namespace: ansible-pre-post
 spec:
-  job_template_name: Demo Post Job
+  job_template_name: Demo Job Template
   tower_auth_secret: toweraccess

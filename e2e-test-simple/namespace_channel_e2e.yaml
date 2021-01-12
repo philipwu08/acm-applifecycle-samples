@@ -7,13 +7,13 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ch-ns
+  name: ch-sub-ns
 ---
 apiVersion: v1
 kind: Secret
 metadata:
   name: dev-test
-  namespace: ch-ns
+  namespace: ch-sub-ns
   labels:
     name: ns-sub
   annotations: 
@@ -30,7 +30,7 @@ metadata:
     name: ns-sub
   annotations: 
     apps.open-cluster-management.io/is-local-deployable: "false"
-  namespace: ch-ns
+  namespace: default
 spec: 
   channels: 
   - ns
@@ -46,12 +46,12 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: ns
-  namespace: ch-ns
+  namespace: ch-sub-ns
   labels:
     name: ns-sub
 spec:
   type: Namespace
-  pathname: ch-ns
+  pathname: ch-sub-ns
   sourceNamespaces:
     - default
 ---
@@ -76,7 +76,7 @@ metadata:
   labels:
     name: ns-sub
 spec:
-  channel: ch-ns/ns
+  channel: ch-sub-ns/ns
   placement:
     local: true
       #    placementRef: 

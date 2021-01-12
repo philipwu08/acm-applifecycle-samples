@@ -30,7 +30,7 @@ metadata:
     name: ns-sub
   annotations: 
     apps.open-cluster-management.io/is-local-deployable: "false"
-  namespace: default
+  namespace: ch-sub-ns
 spec: 
   channels: 
   - ns

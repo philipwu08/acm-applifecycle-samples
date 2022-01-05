@@ -24,29 +24,6 @@ spec:
   insecureSkipVerify: true
 ---
 apiVersion: apps.open-cluster-management.io/v1
-kind: Deployable
-metadata:
-  annotations:
-    apps.open-cluster-management.io/deployable-version: 0.1.0
-    apps.open-cluster-management.io/external-source: gbapp
-    apps.open-cluster-management.io/is-local-deployable: "false"
-  labels:
-    apps.open-cluster-management.io/channel: helm-ch
-    apps.open-cluster-management.io/channel-type: HelmRepo
-  name: sample-guestbook
-  namespace: helm-local
-spec:
-  template:
-    apiVersion: apps.open-cluster-management.io/v1
-    kind: HelmRelease
-    metadata:
-      name: gbapp
-    spec:
-      chartName: gbapp
-      urls: https://ianzhang366.github.io/guestbook-chart/
-      version: 0.1.0
----
-apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
   name: local-sub-test

@@ -1,9 +1,0 @@
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: Channel
-metadata:
-  name: route
-  namespace: wordpress 
-spec:
-  type: git
-  pathname: https://github.com/jnpacker/kustomize 
